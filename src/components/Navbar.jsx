@@ -4,6 +4,7 @@ import { MdDarkMode, MdLightMode } from "react-icons/md";
 import { Link } from "react-router-dom";
 import { useContext } from "react";
 import { ThemeContext } from "../context/ThemeContext";
+import CV from "../assets/CV/Bunyad_Mirzazada.pdf";
 
 function Navbar() {
   const { color, setColor } = useContext(ThemeContext);
@@ -104,7 +105,7 @@ function Navbar() {
       </div>
       <div className="flex items-center gap-6">
         <div className="nav-button max-lg:hidden">
-          <a href="./CV/BunyadMirzazada.pdf" download="BunyadMirzazada.pdf">
+          <a href={CV} download={CV}>
             <button className="font-500 bg-[#efefef] px-[20px] rounded-xl border-0 cursor-pointer flex items-center h-[50px] transition-all hover:bg-[#6E57E0] hover:text-white">
               Download CV <HiOutlineDocumentArrowDown className="ml-[10px]" />
             </button>

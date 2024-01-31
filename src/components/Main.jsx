@@ -1,6 +1,5 @@
 import { useContext, useEffect, useRef, useState } from "react";
 import Typed from "typed.js";
-import { GoDownload } from "react-icons/go";
 import { BsLinkedin } from "react-icons/bs";
 import { FaGithub, FaAward } from "react-icons/fa";
 import { HiOutlineDocumentArrowDown } from "react-icons/hi2";
@@ -11,7 +10,8 @@ import { LuMouse, LuPhone } from "react-icons/lu";
 import { Link } from "react-router-dom";
 import Picture from "../assets/image/coder.jpg";
 import { ThemeContext } from "../context/ThemeContext";
-import emailjs from "./path/to/emailjs/browser";
+import emailjs from "@emailjs/browser";
+import CV from "../assets/CV/Bunyad_Mirzazada.pdf"
 
 function Main() {
   const { color, setColor } = useContext(ThemeContext);
@@ -120,18 +120,18 @@ function Main() {
               </Link>
             </div>
             <div className="flex justify-center items-center w-10 h-10 rounded-[50%] cursor-pointer shadow-lg">
-              <a
-                href="https://github.com/MirzazadaBunyad"
+              <Link
+                to="https://github.com/MirzazadaBunyad"
                 className={`${color ? "text-white" : ""}`}
                 target="_blank"
               >
                 <FaGithub />
-              </a>
+              </Link>
             </div>
             <div className="flex justify-center items-center w-10 h-10 rounded-[50%] cursor-pointer shadow-lg">
-              <a href="mailto:bunyadmirzazada@gmail.com" target="_blank">
+              <Link to="mailto:bunyadmirzazada@gmail.com" target="_blank">
                 <MdEmail className={`${color ? "text-white" : ""}`} />
-              </a>
+              </Link>
             </div>
           </div>
         </div>
@@ -169,15 +169,15 @@ function Main() {
             >
               <h3 className="text-xl font-semibold mb-3.5">My introduction</h3>
               <p className="text-center text-[15px] text-[#777]">
-                I am well-versed in HTML5,CSS3,Javascript and other cutting edge
+                I am well-versed in HTML5,CSS3,Javascript,React.js and other cutting edge
                 frameworks and libraries,which allows me to implement
                 interactive features. Additionally,I have experirence working
                 with content management systems(CMS) like WordPress.
               </p>
               <div className="about-btn">
                 <a
-                  href="./CV/BunyadMirzazada.pdf"
-                  download="BunyadMirzazada.pdf"
+                  href={CV}
+                  download={CV}
                 >
                   <button className="px-[20px] text-white rounded-[30px] cursor-pointer flex items-center h-[50px] transition-all hover:text-white mt-[20px] bg-[#6E57E0] hover:bg-[#285BD4]">
                     Download CV
@@ -333,9 +333,9 @@ function Main() {
                     className="w-full h-[250px] bg-transparent border-2 border-solid border-gray-400 rounded-lg px-[20px] py-[15px] outline-none resize-none"
                   ></textarea>
                 </div>
-                <div className="form-button flex justify-end mt-[5px]">
+                <div className="form-button flex justify-end items-end gap-2.5 mt-[5px]">
                   {isSent && (
-                    <p className="bg-[blue] rounded-[10px] text-center px-[15px] h-[50px] py-[0px] text-[15px]">
+                    <p className="bg-[#38AE2B] rounded-[30px] text-center px-[15px] h-[50px] py-[0px] slide-in">
                       Sent <br />
                       successfully
                     </p>
@@ -343,7 +343,7 @@ function Main() {
                   <button
                     type="submit"
                     value="Send"
-                    className="px-[20px] text-white rounded-[30px] cursor-pointer flex items-center h-[50px] transition-all hover:text-white mt-[20px] bg-[#6E57E0] hover:bg-[#00b5e7] max-sm:w-full max-md:justify-center"
+                    className="px-[20px] z-[9] text-white rounded-[30px] cursor-pointer flex items-center h-[50px] transition-all hover:text-white mt-[20px] bg-[#6E57E0] hover:bg-[#00b5e7] max-sm:w-full max-md:justify-center"
                   >
                     <TbSend className="mr-1 text-lg flex items-center justify-center" />
                     Send
