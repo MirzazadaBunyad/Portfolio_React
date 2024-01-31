@@ -38,54 +38,6 @@ function Footer() {
       <div className="top-footer">
         <p className="text-2xl font-semibold">Mirzazada Bunyad</p>
       </div>
-      {/* <div className="middle-footer">
-        <ul className="footer-menu flex max-md:flex-col max-md:gap-[10px] max-md:items-center">
-          <li className="footer_menu_list list-none">
-            <a
-              id="home"
-              href="#home"
-              className={`${
-                color ? "text-[#DDE6ED]" : ""
-              } font-medium mx-5 no-underline`}
-            >
-              Home
-            </a>
-          </li>
-          <li className="footer_menu_list list-none">
-            <a
-              id="about"
-              href="#about"
-              className={`${
-                color ? "text-[#DDE6ED]" : ""
-              } font-medium mx-5 no-underline`}
-            >
-              About
-            </a>
-          </li>
-          <li className="footer_menu_list list-none">
-            <a
-              id="projects"
-              href="#projects"
-              className={`${
-                color ? "text-[#DDE6ED]" : ""
-              } font-medium mx-5 no-underline`}
-            >
-              Projects
-            </a>
-          </li>
-          <li className="footer_menu_list list-none">
-            <a
-              id="contact"
-              href="#contact"
-              className={`${
-                color ? "text-[#DDE6ED]" : ""
-              } font-medium mx-5 no-underline`}
-            >
-              Contact
-            </a>
-          </li>
-        </ul>
-      </div> */}
       <div className="footer-social-icons flex gap-7">
         <div className="flex justify-center items-center w-10 h-10 rounded-[50%] cursor-pointer shadow-lg">
           <a href="https://www.linkedin.com/in/bunyadmirzazada/" target="blank">

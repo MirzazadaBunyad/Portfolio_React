@@ -12,7 +12,6 @@ import { Link } from "react-router-dom";
 import Picture from "../assets/image/coder.jpg";
 import { ThemeContext } from "../context/ThemeContext";
 import emailjs from "@emailjs/browser";
-import Navbar from "./Navbar";
 
 function Main() {
   const { color, setColor } = useContext(ThemeContext);
@@ -355,7 +354,6 @@ function Main() {
           </div>
         </div>
       </section>
-      <Navbar sectionIds={["home", "about", "projects", "contact"]} />
     </main>
   );
 }
