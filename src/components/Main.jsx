@@ -11,7 +11,7 @@ import { LuMouse, LuPhone } from "react-icons/lu";
 import { Link } from "react-router-dom";
 import Picture from "../assets/image/coder.jpg";
 import { ThemeContext } from "../context/ThemeContext";
-import emailjs from "@emailjs/browser";
+import emailjs from "./path/to/emailjs/browser";
 
 function Main() {
   const { color, setColor } = useContext(ThemeContext);
