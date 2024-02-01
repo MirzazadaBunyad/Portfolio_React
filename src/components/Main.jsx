@@ -10,7 +10,7 @@ import { LuMouse, LuPhone } from "react-icons/lu";
 import { Link } from "react-router-dom";
 import Picture from "../assets/image/coder.jpg";
 import { ThemeContext } from "../context/ThemeContext";
-import emailjs from "@emailjs/browser";
+// import emailjs from "@emailjs/browser";
 import CV from "../assets/CV/Bunyad_Mirzazada.pdf";
 
 function Main() {
@@ -32,51 +32,51 @@ function Main() {
     };
   }, []);
 
-  const form = useRef();
-  const [isSent, setIsSent] = useState(false);
+  // const form = useRef();
+  // const [isSent, setIsSent] = useState(false);
 
-  const validateEmail = (email) => {
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    return emailRegex.test(email);
-  };
+  // const validateEmail = (email) => {
+  //   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  //   return emailRegex.test(email);
+  // };
 
-  const sendEmail = (e) => {
-    e.preventDefault();
+  // const sendEmail = (e) => {
+  //   e.preventDefault();
 
-    const nameInput = form.current.elements["from_name"].value;
-    const emailInput = form.current.elements["from_email"].value;
-    const messageInput = form.current.elements["message"].value;
+  //   const nameInput = form.current.elements["from_name"].value;
+  //   const emailInput = form.current.elements["from_email"].value;
+  //   const messageInput = form.current.elements["message"].value;
 
-    if (!nameInput.trim() || !emailInput.trim() || !messageInput.trim()) {
-      console.log("Please fill in all fields.");
-      return;
-    }
+  //   if (!nameInput.trim() || !emailInput.trim() || !messageInput.trim()) {
+  //     console.log("Please fill in all fields.");
+  //     return;
+  //   }
 
-    if (!validateEmail(emailInput)) {
-      console.log("Please enter a valid email address.");
-      return;
-    }
-    emailjs
-      .sendForm(
-        "service_mphbkfp",
-        "template_idkrt3t",
-        form.current,
-        "kfj10UsjC9WAqs7WH"
-      )
-      .then(
-        (result) => {
-          console.log(result.text);
-          console.log("Message sent");
-          setIsSent(true);
-          setTimeout(() => {
-            setIsSent(false);
-          }, 3000);
-        },
-        (error) => {
-          console.log(error.text);
-        }
-      );
-  };
+  //   if (!validateEmail(emailInput)) {
+  //     console.log("Please enter a valid email address.");
+  //     return;
+  //   }
+  //   emailjs
+  //     .sendForm(
+  //       "service_mphbkfp",
+  //       "template_idkrt3t",
+  //       form.current,
+  //       "kfj10UsjC9WAqs7WH"
+  //     )
+  //     .then(
+  //       (result) => {
+  //         console.log(result.text);
+  //         console.log("Message sent");
+  //         setIsSent(true);
+  //         setTimeout(() => {
+  //           setIsSent(false);
+  //         }, 3000);
+  //       },
+  //       (error) => {
+  //         console.log(error.text);
+  //       }
+  //     );
+  // };
 
   return (
     <main
@@ -308,7 +308,7 @@ function Main() {
           </div>
           <div className="col flex w-1/2 max-md:justify-center max-md:w-full">
             <div className="form-control flex flex-col gap-2.5 w-full">
-              <form ref={form} onSubmit={sendEmail}>
+              <form>
                 <div className="form-inputs flex gap-2.5 w-full max-sm:flex-col">
                   <input
                     type="text"
@@ -331,12 +331,12 @@ function Main() {
                   ></textarea>
                 </div>
                 <div className="form-button flex justify-end items-end gap-2.5 mt-[5px]">
-                  {isSent && (
+                  {/* {isSent && (
                     <p className="bg-[#38AE2B] rounded-[30px] text-center px-[15px] h-[50px] py-[0px] slide-in">
                       Sent <br />
                       successfully
                     </p>
-                  )}
+                  )} */}
                   <button
                     type="submit"
                     value="Send"
