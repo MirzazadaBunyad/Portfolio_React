@@ -11,8 +11,8 @@ import { Link } from "react-router-dom";
 import Picture from "../assets/image/coder.jpg";
 import { ThemeContext } from "../context/ThemeContext";
 // import emailjs from "@emailjs/browser";
-// import emailjs from "/path/to/emailjs/browser";
-import emailjs from "./path/to/emailjs/browser";
+import emailjs from "/path/to/emailjs/browser";
+// import emailjs from "./path/to/emailjs/browser";
 import CV from "../assets/CV/Bunyad_Mirzazada.pdf";
 
 function Main() {
