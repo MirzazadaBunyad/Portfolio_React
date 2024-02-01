@@ -10,8 +10,10 @@ import { LuMouse, LuPhone } from "react-icons/lu";
 import { Link } from "react-router-dom";
 import Picture from "../assets/image/coder.jpg";
 import { ThemeContext } from "../context/ThemeContext";
-import emailjs from "@emailjs/browser";
-import CV from "../assets/CV/Bunyad_Mirzazada.pdf"
+// import emailjs from "@emailjs/browser";
+// import emailjs from "/path/to/emailjs/browser";
+import emailjs from "./path/to/emailjs/browser";
+import CV from "../assets/CV/Bunyad_Mirzazada.pdf";
 
 function Main() {
   const { color, setColor } = useContext(ThemeContext);
@@ -169,16 +171,13 @@ function Main() {
             >
               <h3 className="text-xl font-semibold mb-3.5">My introduction</h3>
               <p className="text-center text-[15px] text-[#777]">
-                I am well-versed in HTML5,CSS3,Javascript,React.js and other cutting edge
-                frameworks and libraries,which allows me to implement
-                interactive features. Additionally,I have experirence working
-                with content management systems(CMS) like WordPress.
+                I am well-versed in HTML5,CSS3,Javascript,React.js and other
+                cutting edge frameworks and libraries,which allows me to
+                implement interactive features. Additionally,I have experirence
+                working with content management systems(CMS) like WordPress.
               </p>
               <div className="about-btn">
-                <a
-                  href={CV}
-                  download={CV}
-                >
+                <a href={CV} download={CV}>
                   <button className="px-[20px] text-white rounded-[30px] cursor-pointer flex items-center h-[50px] transition-all hover:text-white mt-[20px] bg-[#6E57E0] hover:bg-[#285BD4]">
                     Download CV
                     <HiOutlineDocumentArrowDown className="ml-[10px]" />
