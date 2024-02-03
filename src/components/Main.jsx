@@ -46,8 +46,6 @@ function Main() {
       )
       .then(
         (result) => {
-          console.log(result.text);
-          console.log("Message sent");
           setIsSent(true);
           setTimeout(() => {
             setIsSent(false);
