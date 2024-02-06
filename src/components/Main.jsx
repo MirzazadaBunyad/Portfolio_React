@@ -185,6 +185,9 @@ function Main() {
                   Bulma CSS
                 </span>
                 <span className="text-sm bg-[#6E57E0] text-white px-2.5 py-0.5 rounded-[5px]">
+                  SASS
+                </span>
+                <span className="text-sm bg-[#6E57E0] text-white px-2.5 py-0.5 rounded-[5px]">
                   AJAX
                 </span>
                 <span className="text-sm bg-[#6E57E0] text-white px-2.5 py-0.5 rounded-[5px]">
@@ -197,6 +200,9 @@ function Main() {
                   JavaScript
                 </span>
                 <span className="text-sm bg-[#6E57E0] text-white px-2.5 py-0.5 rounded-[5px]">
+                  Basic Typescript
+                </span>
+                <span className="text-sm bg-[#6E57E0] text-white px-2.5 py-0.5 rounded-[5px]">
                   React.js
                 </span>
                 <span className="text-sm bg-[#6E57E0] text-white px-2.5 py-0.5 rounded-[5px]">
@@ -204,6 +210,9 @@ function Main() {
                 </span>
                 <span className="text-sm bg-[#6E57E0] text-white px-2.5 py-0.5 rounded-[5px]">
                   Redux
+                </span>
+                <span className="text-sm bg-[#6E57E0] text-white px-2.5 py-0.5 rounded-[5px]">
+                  Next.js
                 </span>
               </div>
             </div>
@@ -322,7 +331,7 @@ function Main() {
                   <button
                     type="submit"
                     value="Send"
-                    className="px-[20px] z-[9] text-white rounded-[30px] cursor-pointer flex items-center h-[50px] transition-all hover:text-white mt-[20px] bg-[#6E57E0] hover:bg-[#00b5e7] max-sm:w-full max-md:justify-center"
+                    className="px-[20px] z-[999] text-white rounded-[30px] cursor-pointer flex items-center h-[50px] transition-all hover:text-white mt-[20px] bg-[#6E57E0] hover:bg-[#00b5e7] max-md:w-full max-md:justify-center"
                   >
                     <TbSend className="mr-1 text-lg flex items-center justify-center" />
                     Send
