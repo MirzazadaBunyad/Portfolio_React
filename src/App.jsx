@@ -12,12 +12,8 @@ const App = () => {
 
       if (scrollY > 50) {
         navHeader.style.boxShadow = "0 1px 6px rgba(0, 0, 0, 0.1)";
-        navHeader.style.height = "80px";
-        navHeader.style.lineHeight = "80px";
       } else {
         navHeader.style.boxShadow = "none";
-        navHeader.style.height = "90px";
-        navHeader.style.lineHeight = "90px";
       }
     };
 
@@ -37,9 +33,7 @@ const App = () => {
     scroll.reveal(".featured-text-btn", { delay: 200 });
     scroll.reveal(".social_icons", { delay: 200 });
     scroll.reveal(".featured-image", { delay: 300 });
-
     scroll.reveal(".project-box", { interval: 100 });
-
     scroll.reveal(".top-header", {});
 
     const scrollLeft = ScrollReveal({

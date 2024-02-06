@@ -23,6 +23,10 @@
     font-family: "Poppins", sans-serif;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 .darkbg {
     background-color: #0F0F0F;
     color: white;
@@ -37,9 +41,6 @@ a {
     color: black;
 }
 
-html {
-    scroll-behavior: smooth;
-}
 
 ::-webkit-scrollbar {
     width: 10px;

@@ -65,7 +65,7 @@ function Navbar() {
           <li className="list-none relative">
             <Link
               to="home"
-              className={`no-underline font-500 px-[15px] mx-[20px] ${
+              className={`no-underline cursor-pointer font-500 px-[15px] mx-[20px] ${
                 color ? "text-white" : ""
               }`}
               activeClass="active-link"
@@ -80,7 +80,7 @@ function Navbar() {
           <li className="nav_list">
             <Link
               to="about"
-              className={`no-underline font-500 px-[15px] mx-[20px] ${
+              className={`no-underline cursor-pointer font-500 px-[15px] mx-[20px] ${
                 color ? "text-white" : ""
               }`}
               activeClass="active-link"
@@ -95,7 +95,7 @@ function Navbar() {
           <li className="nav_list">
             <Link
               to="projects"
-              className={`no-underline font-500 px-[15px] mx-[20px] ${
+              className={`no-underline cursor-pointer font-500 px-[15px] mx-[20px] ${
                 color ? "text-white" : ""
               }`}
               activeClass="active-link"
@@ -110,7 +110,7 @@ function Navbar() {
           <li className="nav_list">
             <Link
               to="contact"
-              className={`no-underline font-500 px-[15px] mx-[20px] ${
+              className={`no-underline cursor-pointer font-500 px-[15px] mx-[20px] ${
                 color ? "text-white" : ""
               }`}
               activeClass="active-link"
