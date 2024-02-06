@@ -1,14 +1,15 @@
 import { HiOutlineDocumentArrowDown } from "react-icons/hi2";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { MdDarkMode, MdLightMode } from "react-icons/md";
-import { Link } from "react-router-dom";
-import { useContext } from "react";
+import { Link } from "react-scroll";
+import { useContext, useEffect } from "react";
 import { ThemeContext } from "../context/ThemeContext";
 import CV from "../assets/CV/Bunyad_Mirzazada.pdf";
 
 function Navbar() {
   const { color, setColor } = useContext(ThemeContext);
   const toggleDarkMode = () => setColor(!color);
+
   const myMenuFunction = () => {
     let menuBtn = document.getElementById("myNavMenu");
     let body = document.body;
@@ -21,28 +22,36 @@ function Navbar() {
     }
   };
 
-  function scrollActive() {
-    const scrollY = window.scrollY;
+  useEffect(() => {
     const sections = document.querySelectorAll("section[id]");
 
-    sections.forEach((current) => {
-      const sectionHeight = current.offsetHeight;
-      const sectionTop = current.offsetTop - 50;
-      const sectionId = current.getAttribute("id");
+    const handleScroll = () => {
+      const scrollY = window.scrollY;
 
-      const link = document.querySelector(
-        '.nav-menu a[href*="' + sectionId + '"]'
-      );
-      if (link) {
-        if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
-          link.classList.add("active-link");
-        } else {
-          link.classList.remove("active-link");
+      sections.forEach((current) => {
+        const sectionHeight = current.offsetHeight;
+        const sectionTop = current.offsetTop - 50;
+        const currentSectionId = current.getAttribute("id");
+
+        const link = document.querySelector(
+          `.nav-menu a[href="#${currentSectionId}"]`
+        );
+        if (link && currentSectionId === "home") {
+          if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+            link.classList.add("active-link");
+          } else {
+            link.classList.remove("active-link");
+          }
         }
-      }
-    });
-  }
-  window.addEventListener("scroll", scrollActive);
+      });
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   return (
     <nav
@@ -54,51 +63,63 @@ function Navbar() {
       <div className="nav-menu flex items-center" id="myNavMenu">
         <ul className="nav_menu_list flex items-center max-md:flex-col">
           <li className="list-none relative">
-            <a
-              id="home"
-              href="#home"
+            <Link
+              to="home"
               className={`no-underline font-500 px-[15px] mx-[20px] ${
                 color ? "text-white" : ""
-              } active-link`}
+              }`}
+              activeClass="active-link"
+              spy={true}
+              smooth={true}
+              duration={750}
             >
               Home
-            </a>
+            </Link>
             <div className="circle"></div>
           </li>
           <li className="nav_list">
-            <a
-              id="about"
-              href="#about"
+            <Link
+              to="about"
               className={`no-underline font-500 px-[15px] mx-[20px] ${
                 color ? "text-white" : ""
               }`}
+              activeClass="active-link"
+              spy={true}
+              smooth={true}
+              duration={750}
             >
               About
-            </a>
+            </Link>
             <div className="circle"></div>
           </li>
           <li className="nav_list">
-            <a
-              id="projects"
-              href="#projects"
+            <Link
+              to="projects"
               className={`no-underline font-500 px-[15px] mx-[20px] ${
                 color ? "text-white" : ""
               }`}
+              activeClass="active-link"
+              spy={true}
+              smooth={true}
+              duration={750}
             >
               Projects
-            </a>
+            </Link>
             <div className="circle"></div>
           </li>
           <li className="nav_list">
-            <a
-              id="contact"
-              href="#contact"
+            <Link
+              to="contact"
               className={`no-underline font-500 px-[15px] mx-[20px] ${
                 color ? "text-white" : ""
               }`}
+              activeClass="active-link"
+              spy={true}
+              smooth={true}
+              duration={750}
             >
               Contact
-            </a>
+            </Link>
             <div className="circle"></div>
           </li>
         </ul>
@@ -122,16 +143,17 @@ function Navbar() {
         </div>
       </div>
       <div className="nav-menu-btn hidden max-md:flex max-md:items-center max-md:justify-center">
-        <Link>
+        <a>
           <GiHamburgerMenu
             className={`text-[28px] cursor-pointer ${
               color ? "darkbg" : "lightbg"
             }`}
             onClick={myMenuFunction}
           />
-        </Link>
+        </a>
       </div>
     </nav>
   );
 }
+
 export default Navbar;
