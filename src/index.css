@@ -140,6 +140,12 @@ a {
     z-index: 2;
 }
 
+input:-webkit-autofill {
+    transition: background-color 5000000s ease-in-out 0s;
+    -webkit-text-fill-color: white;
+}
+
+
 @keyframes slideIn {
     from {
         transform: translateX(100%);
