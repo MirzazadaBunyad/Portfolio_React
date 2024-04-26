@@ -56,7 +56,7 @@ function Footer() {
         </div>
       </div>
       <div className="text-sm mt-2.5 max-md:text-center">
-        <p>Copyright &copy; 2024 Mirzazada Bunyad - All rights reserved</p>
+        <p>Copyright &copy; 2024 Mirzazada Bunyad - All rights reserved.</p>
       </div>
     </footer>
   );

@@ -5,8 +5,11 @@ import { Link } from "react-scroll";
 import { useContext, useEffect } from "react";
 import { ThemeContext } from "../context/ThemeContext";
 import CV from "../assets/CV/Bunyad_Mirzazada.pdf";
+import { useTranslation } from "react-i18next";
 
 function Navbar() {
+  const { t, i18n } = useTranslation();
+
   const { color, setColor } = useContext(ThemeContext);
   const toggleDarkMode = () => setColor(!color);
 
@@ -56,18 +59,16 @@ function Navbar() {
   return (
     <nav
       id="header"
-      className={`${
-        color ? "darkbg" : "lightbg"
-      } bg-black fixed flex justify-between items-center w-full h-[90px] leading-[90px] px-[9vw] z-[100] transition-all`}
+      className={`${color ? "darkbg" : "lightbg"
+        } bg-black fixed flex justify-between items-center w-full h-[90px] leading-[90px] px-[9vw] z-[100] transition-all`}
     >
       <div className="nav-menu flex items-center" id="myNavMenu">
         <ul className="nav_menu_list flex items-center max-md:flex-col">
           <li className="list-none relative">
             <Link
               to="home"
-              className={`no-underline cursor-pointer font-500 px-[15px] mx-[20px] ${
-                color ? "text-white" : ""
-              }`}
+              className={`no-underline cursor-pointer font-500 px-[15px] mx-[20px] ${color ? "text-white" : ""
+                }`}
               activeClass="active-link"
               spy={true}
               smooth={true}
@@ -80,9 +81,8 @@ function Navbar() {
           <li className="nav_list">
             <Link
               to="about"
-              className={`no-underline cursor-pointer font-500 px-[15px] mx-[20px] ${
-                color ? "text-white" : ""
-              }`}
+              className={`no-underline cursor-pointer font-500 px-[15px] mx-[20px] ${color ? "text-white" : ""
+                }`}
               activeClass="active-link"
               spy={true}
               smooth={true}
@@ -95,9 +95,8 @@ function Navbar() {
           <li className="nav_list">
             <Link
               to="projects"
-              className={`no-underline cursor-pointer font-500 px-[15px] mx-[20px] ${
-                color ? "text-white" : ""
-              }`}
+              className={`no-underline cursor-pointer font-500 px-[15px] mx-[20px] ${color ? "text-white" : ""
+                }`}
               activeClass="active-link"
               spy={true}
               smooth={true}
@@ -110,9 +109,8 @@ function Navbar() {
           <li className="nav_list">
             <Link
               to="contact"
-              className={`no-underline cursor-pointer font-500 px-[15px] mx-[20px] ${
-                color ? "text-white" : ""
-              }`}
+              className={`no-underline cursor-pointer font-500 px-[15px] mx-[20px] ${color ? "text-white" : ""
+                }`}
               activeClass="active-link"
               spy={true}
               smooth={true}
@@ -145,9 +143,8 @@ function Navbar() {
       <div className="nav-menu-btn hidden max-md:flex max-md:items-center max-md:justify-center">
         <a>
           <GiHamburgerMenu
-            className={`text-[28px] cursor-pointer ${
-              color ? "darkbg" : "lightbg"
-            }`}
+            className={`text-[28px] cursor-pointer ${color ? "darkbg" : "lightbg"
+              }`}
             onClick={myMenuFunction}
           />
         </a>

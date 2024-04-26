@@ -42,7 +42,7 @@ function Main() {
         "service_mphbkfp",
         "template_idkrt3t",
         form.current,
-        "kfj10UsjC9WAqs7WH"
+        "1TvpsqZHcYJFzLAM1"
       )
       .then(
         (result) => {
@@ -182,13 +182,10 @@ function Main() {
                   Tailwind CSS
                 </span>
                 <span className="text-sm bg-[#6E57E0] text-white px-2.5 py-0.5 rounded-[5px]">
-                  Material UI
+                  Bulma CSS
                 </span>
                 <span className="text-sm bg-[#6E57E0] text-white px-2.5 py-0.5 rounded-[5px]">
                   SASS
-                </span>
-                <span className="text-sm bg-[#6E57E0] text-white px-2.5 py-0.5 rounded-[5px]">
-                  SCSS
                 </span>
                 <span className="text-sm bg-[#6E57E0] text-white px-2.5 py-0.5 rounded-[5px]">
                   AJAX
@@ -203,13 +200,16 @@ function Main() {
                   JavaScript
                 </span>
                 <span className="text-sm bg-[#6E57E0] text-white px-2.5 py-0.5 rounded-[5px]">
-                  Typescript
+                  Basic Typescript
                 </span>
                 <span className="text-sm bg-[#6E57E0] text-white px-2.5 py-0.5 rounded-[5px]">
                   React.js
                 </span>
                 <span className="text-sm bg-[#6E57E0] text-white px-2.5 py-0.5 rounded-[5px]">
                   Redux Toolkit
+                </span>
+                <span className="text-sm bg-[#6E57E0] text-white px-2.5 py-0.5 rounded-[5px]">
+                  Redux
                 </span>
                 <span className="text-sm bg-[#6E57E0] text-white px-2.5 py-0.5 rounded-[5px]">
                   Next.js
