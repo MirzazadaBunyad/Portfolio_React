@@ -25,6 +25,10 @@ function Navbar() {
     }
   };
 
+  const langChange = (lang) => {
+    i18n.changeLanguage(lang);
+  };
+
   useEffect(() => {
     const sections = document.querySelectorAll("section[id]");
 
@@ -74,7 +78,7 @@ function Navbar() {
               smooth={true}
               duration={750}
             >
-              Home
+              {t("home")}
             </Link>
             <div className="circle"></div>
           </li>
@@ -88,7 +92,7 @@ function Navbar() {
               smooth={true}
               duration={750}
             >
-              About
+              {t("about")}
             </Link>
             <div className="circle"></div>
           </li>
@@ -102,7 +106,7 @@ function Navbar() {
               smooth={true}
               duration={750}
             >
-              Projects
+              {t("projects")}
             </Link>
             <div className="circle"></div>
           </li>
@@ -116,7 +120,7 @@ function Navbar() {
               smooth={true}
               duration={750}
             >
-              Contact
+              {t("contact")}
             </Link>
             <div className="circle"></div>
           </li>
@@ -126,11 +130,11 @@ function Navbar() {
         <div className="nav-button max-lg:hidden">
           <a href={CV} download={CV}>
             <button className="font-500 bg-[#efefef] px-[20px] rounded-xl border-0 cursor-pointer flex items-center h-[50px] transition-all hover:bg-[#6E57E0] hover:text-white">
-              Download CV <HiOutlineDocumentArrowDown className="ml-[10px]" />
+              {t("downloadCV")} <HiOutlineDocumentArrowDown className="ml-[10px]" />
             </button>
           </a>
         </div>
-        <div className="pt-2">
+        <div className="flex">
           <button onClick={toggleDarkMode}>
             {color ? (
               <MdDarkMode className="text-[24px]" />
@@ -138,6 +142,18 @@ function Navbar() {
               <MdLightMode className="text-[24px]" />
             )}
           </button>
+        </div>
+        <div>
+          <select
+            className={`font-500 h-[70px] px-[15px] appearance-none border-none cursor-pointer outline-none ${color ? "bg-[#0F0F0F] text-white" : "bg-[white] text-black"
+              }`}
+            name="lang"
+            id="language"
+            onChange={(e) => langChange(e.target.value)}
+          >
+            <option value="az">Az</option>
+            <option value="en">En</option>
+          </select>
         </div>
       </div>
       <div className="nav-menu-btn hidden max-md:flex max-md:items-center max-md:justify-center">

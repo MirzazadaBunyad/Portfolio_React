@@ -16,7 +16,7 @@
     "@mui/material": "^5.15.6",
     "emailjs": "^4.0.3",
     "i18n-react": "^0.7.0",
-    "i18next": "^23.11.2",
+    "i18next": "^23.11.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-i18next": "^14.1.1",

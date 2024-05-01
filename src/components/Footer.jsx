@@ -3,6 +3,7 @@ import { BsLinkedin } from "react-icons/bs";
 import { FaGithub } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import { ThemeContext } from "../context/ThemeContext";
+import { useTranslation } from "react-i18next";
 
 function Footer() {
   const { color, setColor } = useContext(ThemeContext);
@@ -29,6 +30,8 @@ function Footer() {
     });
   }
   window.addEventListener("scroll", scrollActive);
+
+  const { t, i18n } = useTranslation();
   return (
     <footer
       className={`${
@@ -36,7 +39,7 @@ function Footer() {
       } flex justify-center items-center flex-col gap-y-8 bg-[#f8f8f8] py-9 px-14`}
     >
       <div className="top-footer">
-        <p className="text-2xl font-semibold">Mirzazada Bunyad</p>
+        <p className="text-2xl font-semibold cursor-default">{t("nameSurname")}</p>
       </div>
       <div className="footer-social-icons flex gap-7">
         <div className="flex justify-center items-center w-10 h-10 rounded-[50%] cursor-pointer shadow-lg">
@@ -56,7 +59,7 @@ function Footer() {
         </div>
       </div>
       <div className="text-sm mt-2.5 max-md:text-center">
-        <p>Copyright &copy; 2024 Mirzazada Bunyad - All rights reserved.</p>
+        <p>{t("copyright")}</p>
       </div>
     </footer>
   );

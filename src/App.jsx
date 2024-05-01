@@ -56,7 +56,6 @@ const App = () => {
     scrollRight.reveal(".skills-box", { delay: 100 });
     scrollRight.reveal(".form-control", { delay: 100 });
   }, []);
-
   return (
     <>
       <Navbar />

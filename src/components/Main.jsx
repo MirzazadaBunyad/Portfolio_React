@@ -11,6 +11,7 @@ import { Link } from "react-router-dom";
 import Picture from "../assets/image/coder.jpg";
 import { ThemeContext } from "../context/ThemeContext";
 import emailjs from "../../node_modules/@emailjs/browser";
+import { useTranslation } from "react-i18next";
 import CV from "../assets/CV/Bunyad_Mirzazada.pdf";
 
 function Main() {
@@ -42,7 +43,7 @@ function Main() {
         "service_mphbkfp",
         "template_idkrt3t",
         form.current,
-        "1TvpsqZHcYJFzLAM1"
+        "kfj10UsjC9WAqs7WH"
       )
       .then(
         (result) => {
@@ -56,12 +57,11 @@ function Main() {
         }
       );
   };
-
+  const { t, i18n } = useTranslation();
   return (
     <main
-      className={`${
-        color ? "darkbg" : "lightbg"
-      } px-[10vw] overflow-hidden w-full`}
+      className={`${color ? "darkbg" : "lightbg"
+        } px-[10vw] overflow-hidden w-full`}
     >
       <section
         className="featured-box relative flex h-24 min-h-[700px] py-[2em] max-md:flex-col max-md:justify-center max-md:h-[100vh]"
@@ -69,23 +69,21 @@ function Main() {
       >
         <div className="featured-text relative flex justify-center content-center min-h-[80vh] flex-col w-1/2 pl-5 max-lg:p-0 max-md:w-full max-md:order-2 max-md:justify-center max-md:content-start max-md:min-h-[60vh]">
           <div className="featured-text-card">
-            <span className="bg-[#43766C] text-white py-[4px] px-[9px] text-[20px] max-md:text-[16px] rounded-[5px]">
-              Mirzazada Bunyad
+            <span className="bg-[#43766C] text-white py-[4px] px-[9px] text-[20px] max-md:text-[16px] rounded-[5px] cursor-default">
+              {t("nameSurname")}
             </span>
           </div>
           <div className="featured-name text-[45px] font-semibold text-[#B8B8B8] my-[20px] max-sm:text-[40px]">
             <p
-              className={`${
-                color ? "text-white" : ""
-              } max-lg:text-[30px] max-md:text-[23px]`}
+              className={`${color ? "text-white" : ""
+                } max-lg:text-[30px] max-md:text-[23px] cursor-default`}
             >
-              I'm <span className="typedText capitalize text-[#1E9FAB]"></span>
+              {t("I_m")} <span className="typedText capitalize text-[#1E9FAB]"></span>
             </p>
           </div>
           <div className="featured-text-info text-[15px] mb-8 text-[#B8B8B8]">
-            <p className="">
-              Experienced front-end developer with a passion for creating
-              visually stunning and user-friendly websites.
+            <p>
+              {t("featuredText")}
             </p>
           </div>
           <div className="social_icons flex gap-7 max-md:mt-[2em]">
@@ -126,37 +124,32 @@ function Main() {
         <div className="scroll-icon-box">
           <a
             href="#about"
-            className={`${
-              color ? "text-white" : ""
-            } scroll-btn  absolute bottom-0 left-1/2 flex justify-center items-center w-[150px] h-[50px] gap-1 no-underline text-[#B8B8B8] rounded-[30px] border-[1px] border-solid z-[9] shadow-lg`}
+            className={`${color ? "text-white" : ""
+              } scroll-btn  absolute bottom-0 left-1/2 flex justify-center items-center w-[150px] h-[50px] gap-1 no-underline text-[#B8B8B8] rounded-[30px] border-[1px] border-solid z-[9] shadow-lg`}
           >
             <LuMouse className="text-[24px]" />
-            <p>Scroll Down</p>
+            <p className="text-[12px]">{t("scrollDown")}</p>
           </a>
         </div>
       </section>
       <section className="section py-[2em]" id="about">
         <div className="top-header text-center mb-[4em]">
-          <h1 className="text-2xl font-semibold mb-2.5">About Me</h1>
+          <h1 className="text-2xl font-semibold mb-2.5 cursor-default">{t("aboutMe")}</h1>
         </div>
         <div className="flex justify-between w-full gap-[50px] max-md:flex-col max-md:justify-center">
           <div className="col flex w-[90%] max-md:justify-center max-md:w-full">
             <div
-              className={`${
-                color ? "bg-[#232D3F]" : ""
-              } about-info relative flex items-center flex-col py-[30px] px-[20px] w-full rounded-[20px] shadow-2xl`}
+              className={`${color ? "bg-[#232D3F]" : ""
+                } about-info relative flex items-center flex-col py-[30px] px-[20px] w-full rounded-[20px] shadow-2xl`}
             >
-              <h3 className="text-xl font-semibold mb-3.5">My introduction</h3>
+              <h3 className="text-xl font-semibold mb-3.5 cursor-default">{t("myIntro")}</h3>
               <p className="text-center text-[15px] text-[#777]">
-                I am well-versed in HTML5,CSS3,Javascript,React.js and other
-                cutting edge frameworks and libraries,which allows me to
-                implement interactive features. Additionally,I have experirence
-                working with content management systems(CMS) like WordPress.
+                {t("introduction")}
               </p>
               <div className="about-btn">
                 <a href={CV} download={CV}>
                   <button className="px-[20px] text-white rounded-[30px] cursor-pointer flex items-center h-[50px] transition-all hover:text-white mt-[20px] bg-[#6E57E0] hover:bg-[#285BD4]">
-                    Download CV
+                    {t("downloadCV")}
                     <HiOutlineDocumentArrowDown className="ml-[10px]" />
                   </button>
                 </a>
@@ -166,7 +159,7 @@ function Main() {
           <div className="col flex max-lg:flex-col">
             <div className="skills-box m-2.5">
               <div className="skills-header mb-5">
-                <h3 className="text-xl font-semibold">Front-End</h3>
+                <h3 className="text-xl font-semibold cursor-default">Front-End</h3>
               </div>
               <div className="skills-list flex flex-wrap gap-2">
                 <span className="text-sm bg-[#6E57E0] text-white px-2.5 py-0.5 rounded-[5px]">
@@ -218,7 +211,7 @@ function Main() {
             </div>
             <div className="skills-box m-2.5">
               <div className="skills-header mb-5">
-                <h3 className="text-xl font-semibold">Database</h3>
+                <h3 className="text-xl font-semibold cursor-default">{t("database")}</h3>
               </div>
               <div className="skills-list flex flex-wrap gap-2">
                 <span className="text-sm bg-[#6E57E0] text-white px-2.5 py-0.5 rounded-[5px]">
@@ -228,7 +221,7 @@ function Main() {
             </div>
             <div className="skills-box m-2.5">
               <div className="skills-header mb-5">
-                <h3 className="text-xl font-semibold">Design</h3>
+                <h3 className="text-xl font-semibold cursor-default">{t("design")}</h3>
               </div>
               <div className="skills-list flex flex-wrap gap-2">
                 <span className="text-sm bg-[#6E57E0] text-white px-2.5 py-0.5 rounded-[5px]">
@@ -241,41 +234,39 @@ function Main() {
       </section>
       <section className="section py-[2em]" id="projects">
         <div className="top-header text-center mb-[4em]">
-          <h1 className="text-2xl font-semibold mb-2.5">Projects</h1>
+          <h1 className="text-2xl font-semibold mb-2.5 cursor-default">{t("projects")}</h1>
         </div>
         <div className="project-container flex w-full justify-center gap-5 flex-wrap">
           <div
-            className={`project-box shadow-2xl relative flex justify-center items-center flex-col w-[30%] h-[250px] rounded-[20px] overflow-hidden max-md:w-[80%] max-sm:w-full ${
-              color ? "bg-[#6E57E0]" : ""
-            }`}
+            className={`project-box shadow-2xl relative flex justify-center items-center flex-col w-[30%] h-[250px] rounded-[20px] overflow-hidden max-md:w-[80%] max-sm:w-full ${color ? "bg-[#6E57E0]" : ""
+              }`}
           >
             <IoBagRemoveOutline className="text-5xl text-[#00b5e7] mb-6 z-[9]" />
-            <h3 className="text-xl font-semibold">Completed</h3>
-            <label className="text-[15px]">5+ finished projects</label>
+            <h3 className="text-xl font-semibold cursor-default">{t("completed")}</h3>
+            <label className="text-[15px]">{t("finished")}</label>
           </div>
           <div
-            className={`project-box shadow-2xl relative flex justify-center items-center flex-col w-[30%] h-[250px] rounded-[20px] overflow-hidden max-md:w-[80%] max-sm:w-full ${
-              color ? "bg-[#6E57E0]" : ""
-            }`}
+            className={`project-box shadow-2xl relative flex justify-center items-center flex-col w-[30%] h-[250px] rounded-[20px] overflow-hidden max-md:w-[80%] max-sm:w-full ${color ? "bg-[#6E57E0]" : ""
+              }`}
           >
             <FaAward className="text-5xl text-[#00b5e7] mb-6 z-[9]" />
-            <h3 className="text-xl font-semibold">Experience</h3>
-            <label className="text-[15px]">1+ years in the field</label>
+            <h3 className="text-xl font-semibold cursor-default">{t("experience")}</h3>
+            <label className="text-[15px]">{t("years")}</label>
           </div>
         </div>
       </section>
       <section className="section py-[2em]" id="contact">
         <div className="top-header text-center mb-[4em]">
-          <h1 className="text-2xl font-semibold mb-2.5">Get in touch</h1>
-          <span>Do you have a project in your mind, contact me here</span>
+          <h1 className="text-2xl font-semibold mb-2.5 cursor-default">{t("contact")}</h1>
+          <span className="cursor-default">{t("contDesc")}</span>
         </div>
         <div className="row flex justify-between w-full gap-12 max-md:flex-col max-md:justify-center">
           <div className="col flex w-[50%] max-md:justify-center max-md:w-full">
             <div className="contact-info relative flex flex-col items-center justify-center p-5 w-full h-[315px] bg-[#6E57E0] rounded-lg overflow-hidden">
-              <h2 className="text-2xl flex items-center text-white mb-5">
-                Find Me <TbCornerRightDown className="text-xl" />
+              <h2 className="text-2xl flex text-center items-center text-white mb-5 cursor-default">
+                {t("find")} <TbCornerRightDown className="text-xl" />
               </h2>
-              <p className="flex items-center gap-2.5 my-1 text-white max-sm:text-xs">
+              <p className="flex items-center gap-2.5 my-1 text-white max-sm:text-xs cursor-default">
                 <MdOutlineEmail className="text-lg" />
                 Email:
                 <a
@@ -285,7 +276,7 @@ function Main() {
                   bunyadmirzazada@gmail.com
                 </a>
               </p>
-              <p className="flex items-center gap-2.5 my-1 text-white max-sm:text-xs">
+              <p className="flex items-center gap-2.5 my-1 text-white max-sm:text-xs cursor-default">
                 <LuPhone className="text-lg" />
                 Phone:
                 <a href="tel:+994509709702" className="text-white">
@@ -301,7 +292,7 @@ function Main() {
                   <input
                     type="text"
                     className="input-field w-1/2 h-[55px] bg-transparent border-2 border-solid border-gray-400 rounded-lg px-[20px] outline-none max-sm:w-full"
-                    placeholder="Name"
+                    placeholder={t("name")}
                     name="from_name"
                     required
                   />
@@ -316,16 +307,15 @@ function Main() {
                 <div className="text-area mt-[10px]">
                   <textarea
                     required
-                    placeholder="Message"
+                    placeholder={t("message")}
                     name="message"
                     className="w-full h-[250px] bg-transparent border-2 border-solid border-gray-400 rounded-lg px-[20px] py-[15px] outline-none resize-none"
                   ></textarea>
                 </div>
                 <div className="form-button flex justify-end items-end gap-2.5 mt-[5px]">
                   {isSent && (
-                    <p className="bg-[#38AE2B] rounded-[30px] text-center px-[15px] h-[50px] py-[0px] slide-in">
-                      Sent <br />
-                      successfully
+                    <p className="bg-[#38AE2B] rounded-[30px] text-center px-[15px] w-[150px] h-[50px] py-[0px] slide-in">
+                      {t("sent")}
                     </p>
                   )}
                   <button
@@ -334,7 +324,7 @@ function Main() {
                     className="px-[20px] z-[999] text-white rounded-[30px] cursor-pointer flex items-center h-[50px] transition-all hover:text-white mt-[20px] bg-[#6E57E0] hover:bg-[#00b5e7] max-md:w-full max-md:justify-center"
                   >
                     <TbSend className="mr-1 text-lg flex items-center justify-center" />
-                    Send
+                    {t("send")}
                   </button>
                 </div>
               </form>
