@@ -4,7 +4,7 @@ import { MdDarkMode, MdLightMode } from "react-icons/md";
 import { Link } from "react-scroll";
 import { useContext, useEffect } from "react";
 import { ThemeContext } from "../context/ThemeContext";
-import CV from "../assets/CV/Bunyad_Mirzazada.pdf";
+import CV from "../assets/CV/BunyadMirzazada.pdf";
 import { useTranslation } from "react-i18next";
 
 function Navbar() {

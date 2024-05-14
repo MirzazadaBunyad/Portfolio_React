@@ -12,7 +12,7 @@ import Picture from "../assets/image/coder.jpg";
 import { ThemeContext } from "../context/ThemeContext";
 import emailjs from "../../node_modules/@emailjs/browser";
 import { useTranslation } from "react-i18next";
-import CV from "../assets/CV/Bunyad_Mirzazada.pdf";
+import CV from "../assets/CV/BunyadMirzazada.pdf";
 
 function Main() {
   const { color, setColor } = useContext(ThemeContext);
