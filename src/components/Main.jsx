@@ -8,7 +8,7 @@ import { TbCornerRightDown, TbSend } from "react-icons/tb";
 import { MdOutlineEmail, MdEmail } from "react-icons/md";
 import { LuMouse, LuPhone } from "react-icons/lu";
 import { Link } from "react-router-dom";
-import Picture from "../assets/image/coder.jpg";
+import Picture from "../assets/image/newphoto_removebg.png";
 import { ThemeContext } from "../context/ThemeContext";
 import emailjs from "../../node_modules/@emailjs/browser";
 import { useTranslation } from "react-i18next";
@@ -16,9 +16,6 @@ import CV from "../assets/CV/BunyadMirzazada.pdf";
 
 function Main() {
   const { color, setColor } = useContext(ThemeContext);
-  const Allinformations = {
-    Picture: Picture,
-  };
   useEffect(() => {
     const options = {
       strings: ["Front-End Developer"],
@@ -115,7 +112,7 @@ function Main() {
         <div className="flex content-center min-h-[80vh] w-1/2 justify-end max-md:order-1 max-md:justify-center max-md:min-h-[150px] max-md:w-full max-md:mt-[65px]">
           <div className="image w-96 h-96 my-auto mx-0 max-md:w-[150px] max-md:h-[150px]">
             <img
-              src={Allinformations.Picture}
+              src={Picture}
               alt="avatar"
               className="w-96 h-96 object-contain max-md:w-[150px] max-md:h-[150px]"
             />
