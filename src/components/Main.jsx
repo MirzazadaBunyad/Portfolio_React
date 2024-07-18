@@ -1,7 +1,7 @@
 import { useContext, useEffect, useRef, useState } from "react";
 import Typed from "typed.js";
 import { BsLinkedin } from "react-icons/bs";
-import { FaGithub, FaAward } from "react-icons/fa";
+import { FaGithub, FaAward, FaHtml5, FaCss3Alt, FaBootstrap, FaSass, FaReact } from "react-icons/fa";
 import { HiOutlineDocumentArrowDown } from "react-icons/hi2";
 import { IoBagRemoveOutline } from "react-icons/io5";
 import { TbCornerRightDown, TbSend } from "react-icons/tb";
@@ -13,6 +13,11 @@ import { ThemeContext } from "../context/ThemeContext";
 import emailjs from "../../node_modules/@emailjs/browser";
 import { useTranslation } from "react-i18next";
 import CV from "../assets/CV/BunyadMirzazada.pdf";
+import { RiJavascriptFill, RiNextjsFill, RiTailwindCssFill } from "react-icons/ri";
+import { DiResponsive } from "react-icons/di";
+import { SiBulma, SiFigma, SiJquery, SiMongodb, SiRedux } from "react-icons/si";
+import { VscJson } from "react-icons/vsc";
+import { BiLogoTypescript } from "react-icons/bi";
 
 function Main() {
   const { color, setColor } = useContext(ThemeContext);
@@ -37,10 +42,10 @@ function Main() {
     e.preventDefault();
     emailjs
       .sendForm(
-        "service_mphbkfp",
-        "template_idkrt3t",
+        "service_rmanlx7",
+        "template_tgv7gzh",
         form.current,
-        "kfj10UsjC9WAqs7WH"
+        "tPihT6yhTcJF4ICP-"
       )
       .then(
         (result) => {
@@ -159,50 +164,60 @@ function Main() {
                 <h3 className="text-xl font-semibold cursor-default">Front-End</h3>
               </div>
               <div className="skills-list flex flex-wrap gap-2">
-                <span className="text-sm bg-[#6E57E0] text-white px-2.5 py-0.5 rounded-[5px]">
+                <span className="text-sm flex items-center gap-1 bg-[#6E57E0] text-white px-2.5 py-0.5 rounded-[5px]">
+                  <FaHtml5 />
                   HTML5
                 </span>
-                <span className="text-sm bg-[#6E57E0] text-white px-2.5 py-0.5 rounded-[5px]">
+                <span className="text-sm flex items-center gap-1 bg-[#6E57E0] text-white px-2.5 py-0.5 rounded-[5px]">
+                  <FaCss3Alt />
                   CSS3
                 </span>
-                <span className="text-sm bg-[#6E57E0] text-white px-2.5 py-0.5 rounded-[5px]">
+                <span className="text-sm flex items-center gap-1 bg-[#6E57E0] text-white px-2.5 py-0.5 rounded-[5px]">
+                  <FaBootstrap />
                   Bootstrap5
                 </span>
-                <span className="text-sm bg-[#6E57E0] text-white px-2.5 py-0.5 rounded-[5px]">
+                <span className="text-sm flex items-center gap-1 bg-[#6E57E0] text-white px-2.5 py-0.5 rounded-[5px]">
+                  <RiTailwindCssFill />
                   Tailwind CSS
                 </span>
-                <span className="text-sm bg-[#6E57E0] text-white px-2.5 py-0.5 rounded-[5px]">
+                <span className="text-sm flex items-center gap-1 bg-[#6E57E0] text-white px-2.5 py-0.5 rounded-[5px]">
+                  <SiBulma />
                   Bulma CSS
                 </span>
-                <span className="text-sm bg-[#6E57E0] text-white px-2.5 py-0.5 rounded-[5px]">
+                <span className="text-sm flex items-center gap-1 bg-[#6E57E0] text-white px-2.5 py-0.5 rounded-[5px]">
+                  <FaSass />
                   SASS
                 </span>
-                <span className="text-sm bg-[#6E57E0] text-white px-2.5 py-0.5 rounded-[5px]">
-                  AJAX
-                </span>
-                <span className="text-sm bg-[#6E57E0] text-white px-2.5 py-0.5 rounded-[5px]">
+                <span className="text-sm flex items-center gap-1 bg-[#6E57E0] text-white px-2.5 py-0.5 rounded-[5px]">
+                  <VscJson />
                   JSON
                 </span>
-                <span className="text-sm bg-[#6E57E0] text-white px-2.5 py-0.5 rounded-[5px]">
+                <span className="text-sm flex items-center gap-1 bg-[#6E57E0] text-white px-2.5 py-0.5 rounded-[5px]">
+                  <SiJquery />
                   jQuery
                 </span>
-                <span className="text-sm bg-[#6E57E0] text-white px-2.5 py-0.5 rounded-[5px]">
+                <span className="text-sm flex items-center gap-1 bg-[#6E57E0] text-white px-2.5 py-0.5 rounded-[5px]">
+                  <RiJavascriptFill />
                   JavaScript
                 </span>
-                <span className="text-sm bg-[#6E57E0] text-white px-2.5 py-0.5 rounded-[5px]">
-                  Basic Typescript
+                <span className="text-sm flex items-center gap-1 bg-[#6E57E0] text-white px-2.5 py-0.5 rounded-[5px]">
+                  <BiLogoTypescript />
+                  Typescript
                 </span>
-                <span className="text-sm bg-[#6E57E0] text-white px-2.5 py-0.5 rounded-[5px]">
+                <span className="text-sm flex items-center gap-1 bg-[#6E57E0] text-white px-2.5 py-0.5 rounded-[5px]">
+                  <FaReact />
                   React.js
                 </span>
-                <span className="text-sm bg-[#6E57E0] text-white px-2.5 py-0.5 rounded-[5px]">
+                <span className="text-sm flex items-center gap-1 bg-[#6E57E0] text-white px-2.5 py-0.5 rounded-[5px]">
+                  <SiRedux />
                   Redux Toolkit
                 </span>
-                <span className="text-sm bg-[#6E57E0] text-white px-2.5 py-0.5 rounded-[5px]">
-                  Redux
-                </span>
-                <span className="text-sm bg-[#6E57E0] text-white px-2.5 py-0.5 rounded-[5px]">
+                <span className="text-sm flex items-center gap-1 bg-[#6E57E0] text-white px-2.5 py-0.5 rounded-[5px]">
+                  <RiNextjsFill />
                   Next.js
+                </span>
+                <span className="text-sm flex items-center gap-1 bg-[#6E57E0] text-white px-2.5 py-0.5 rounded-[5px]">
+                  AJAX
                 </span>
               </div>
             </div>
@@ -211,7 +226,8 @@ function Main() {
                 <h3 className="text-xl font-semibold cursor-default">{t("database")}</h3>
               </div>
               <div className="skills-list flex flex-wrap gap-2">
-                <span className="text-sm bg-[#6E57E0] text-white px-2.5 py-0.5 rounded-[5px]">
+                <span className="text-sm flex items-center gap-1 bg-[#6E57E0] text-white px-2.5 py-0.5 rounded-[5px]">
+                  <SiMongodb />
                   MongoDB
                 </span>
               </div>
@@ -221,7 +237,8 @@ function Main() {
                 <h3 className="text-xl font-semibold cursor-default">{t("design")}</h3>
               </div>
               <div className="skills-list flex flex-wrap gap-2">
-                <span className="text-sm bg-[#6E57E0] text-white px-2.5 py-0.5 rounded-[5px]">
+                <span className="text-sm flex items-center gap-1 bg-[#6E57E0] text-white px-2.5 py-0.5 rounded-[5px]">
+                  <SiFigma />
                   Figma
                 </span>
               </div>
