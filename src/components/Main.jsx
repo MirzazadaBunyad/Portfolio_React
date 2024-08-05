@@ -209,6 +209,10 @@ function Main() {
                   React.js
                 </span>
                 <span className="text-sm flex items-center gap-1 bg-[#6E57E0] text-white px-2.5 py-0.5 rounded-[5px]">
+                  <FaReact />
+                  React Native
+                </span>
+                <span className="text-sm flex items-center gap-1 bg-[#6E57E0] text-white px-2.5 py-0.5 rounded-[5px]">
                   <SiRedux />
                   Redux Toolkit
                 </span>
