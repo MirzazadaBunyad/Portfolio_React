@@ -23,7 +23,7 @@ function Main() {
   const { color, setColor } = useContext(ThemeContext);
   useEffect(() => {
     const options = {
-      strings: ["Front-End Developer"],
+      strings: ["Front-End and Mobile Developer"],
       loop: true,
       typeSpeed: 130,
       backSpeed: 80,
@@ -69,7 +69,7 @@ function Main() {
         className="featured-box relative flex h-24 min-h-[700px] py-[2em] max-md:flex-col max-md:justify-center max-md:h-[100vh]"
         id="home"
       >
-        <div className="featured-text relative flex justify-center content-center min-h-[80vh] flex-col w-1/2 pl-5 max-lg:p-0 max-md:w-full max-md:order-2 max-md:justify-center max-md:content-start max-md:min-h-[60vh]">
+        <div className="featured-text relative flex justify-center content-center min-h-[80vh] flex-col w-[65%] pl-5 max-lg:p-0 max-md:w-full max-md:order-2 max-md:justify-center max-md:content-start max-md:min-h-[60vh]">
           <div className="featured-text-card">
             <span className="bg-[#43766C] text-white py-[4px] px-[9px] text-[20px] max-md:text-[16px] rounded-[5px] cursor-default">
               {t("nameSurname")}
@@ -78,12 +78,12 @@ function Main() {
           <div className="featured-name text-[45px] font-semibold text-[#B8B8B8] my-[20px] max-sm:text-[40px]">
             <p
               className={`${color ? "text-white" : ""
-                } max-lg:text-[30px] max-md:text-[23px] cursor-default`}
+                } max-lg:text-[20px] max-md:text-[23px] cursor-default`}
             >
-              {t("I_m")} <span className="typedText capitalize text-[#1E9FAB]"></span>
+              {t("I_m")} <span className="typedText text-[#1E9FAB]"></span>
             </p>
           </div>
-          <div className="featured-text-info text-[15px] mb-8 text-[#B8B8B8]">
+          <div className="featured-text-info lg:w-[90%] text-[15px] mb-8 text-[#B8B8B8]">
             <p>
               {t("featuredText")}
             </p>
@@ -114,7 +114,7 @@ function Main() {
             </div>
           </div>
         </div>
-        <div className="flex content-center min-h-[80vh] w-1/2 justify-end max-md:order-1 max-md:justify-center max-md:min-h-[150px] max-md:w-full max-md:mt-[65px]">
+        <div className="flex content-center min-h-[80vh] w-[35%] justify-end max-md:order-1 max-md:justify-center max-md:min-h-[150px] max-md:w-full max-md:mt-[65px]">
           <div className="image w-96 h-96 my-auto mx-0 max-md:w-[150px] max-md:h-[150px]">
             <img
               src={Picture}
@@ -159,70 +159,79 @@ function Main() {
             </div>
           </div>
           <div className="col flex max-lg:flex-col">
-            <div className="skills-box m-2.5">
-              <div className="skills-header mb-5">
-                <h3 className="text-xl font-semibold cursor-default">Front-End</h3>
+            <div className="skills-box flex flex-col">
+              <div className="skills-box m-2.5">
+                <div className="skills-header mb-5">
+                  <h3 className="text-xl font-semibold cursor-default">Front-End</h3>
+                </div>
+                <div className="skills-list flex flex-wrap gap-2">
+                  <span className="text-sm flex items-center gap-1 bg-[#6E57E0] text-white px-2.5 py-0.5 rounded-[5px]">
+                    <FaHtml5 />
+                    HTML5
+                  </span>
+                  <span className="text-sm flex items-center gap-1 bg-[#6E57E0] text-white px-2.5 py-0.5 rounded-[5px]">
+                    <FaCss3Alt />
+                    CSS3
+                  </span>
+                  <span className="text-sm flex items-center gap-1 bg-[#6E57E0] text-white px-2.5 py-0.5 rounded-[5px]">
+                    <FaBootstrap />
+                    Bootstrap5
+                  </span>
+                  <span className="text-sm flex items-center gap-1 bg-[#6E57E0] text-white px-2.5 py-0.5 rounded-[5px]">
+                    <RiTailwindCssFill />
+                    Tailwind CSS
+                  </span>
+                  <span className="text-sm flex items-center gap-1 bg-[#6E57E0] text-white px-2.5 py-0.5 rounded-[5px]">
+                    <SiBulma />
+                    Bulma CSS
+                  </span>
+                  <span className="text-sm flex items-center gap-1 bg-[#6E57E0] text-white px-2.5 py-0.5 rounded-[5px]">
+                    <FaSass />
+                    SASS
+                  </span>
+                  <span className="text-sm flex items-center gap-1 bg-[#6E57E0] text-white px-2.5 py-0.5 rounded-[5px]">
+                    <VscJson />
+                    JSON
+                  </span>
+                  <span className="text-sm flex items-center gap-1 bg-[#6E57E0] text-white px-2.5 py-0.5 rounded-[5px]">
+                    <SiJquery />
+                    jQuery
+                  </span>
+                  <span className="text-sm flex items-center gap-1 bg-[#6E57E0] text-white px-2.5 py-0.5 rounded-[5px]">
+                    <RiJavascriptFill />
+                    JavaScript
+                  </span>
+                  <span className="text-sm flex items-center gap-1 bg-[#6E57E0] text-white px-2.5 py-0.5 rounded-[5px]">
+                    <BiLogoTypescript />
+                    Typescript
+                  </span>
+                  <span className="text-sm flex items-center gap-1 bg-[#6E57E0] text-white px-2.5 py-0.5 rounded-[5px]">
+                    <FaReact />
+                    React.js
+                  </span>
+                  <span className="text-sm flex items-center gap-1 bg-[#6E57E0] text-white px-2.5 py-0.5 rounded-[5px]">
+                    <SiRedux />
+                    Redux Toolkit
+                  </span>
+                  <span className="text-sm flex items-center gap-1 bg-[#6E57E0] text-white px-2.5 py-0.5 rounded-[5px]">
+                    <RiNextjsFill />
+                    Next.js
+                  </span>
+                  <span className="text-sm flex items-center gap-1 bg-[#6E57E0] text-white px-2.5 py-0.5 rounded-[5px]">
+                    AJAX
+                  </span>
+                </div>
               </div>
-              <div className="skills-list flex flex-wrap gap-2">
-                <span className="text-sm flex items-center gap-1 bg-[#6E57E0] text-white px-2.5 py-0.5 rounded-[5px]">
-                  <FaHtml5 />
-                  HTML5
-                </span>
-                <span className="text-sm flex items-center gap-1 bg-[#6E57E0] text-white px-2.5 py-0.5 rounded-[5px]">
-                  <FaCss3Alt />
-                  CSS3
-                </span>
-                <span className="text-sm flex items-center gap-1 bg-[#6E57E0] text-white px-2.5 py-0.5 rounded-[5px]">
-                  <FaBootstrap />
-                  Bootstrap5
-                </span>
-                <span className="text-sm flex items-center gap-1 bg-[#6E57E0] text-white px-2.5 py-0.5 rounded-[5px]">
-                  <RiTailwindCssFill />
-                  Tailwind CSS
-                </span>
-                <span className="text-sm flex items-center gap-1 bg-[#6E57E0] text-white px-2.5 py-0.5 rounded-[5px]">
-                  <SiBulma />
-                  Bulma CSS
-                </span>
-                <span className="text-sm flex items-center gap-1 bg-[#6E57E0] text-white px-2.5 py-0.5 rounded-[5px]">
-                  <FaSass />
-                  SASS
-                </span>
-                <span className="text-sm flex items-center gap-1 bg-[#6E57E0] text-white px-2.5 py-0.5 rounded-[5px]">
-                  <VscJson />
-                  JSON
-                </span>
-                <span className="text-sm flex items-center gap-1 bg-[#6E57E0] text-white px-2.5 py-0.5 rounded-[5px]">
-                  <SiJquery />
-                  jQuery
-                </span>
-                <span className="text-sm flex items-center gap-1 bg-[#6E57E0] text-white px-2.5 py-0.5 rounded-[5px]">
-                  <RiJavascriptFill />
-                  JavaScript
-                </span>
-                <span className="text-sm flex items-center gap-1 bg-[#6E57E0] text-white px-2.5 py-0.5 rounded-[5px]">
-                  <BiLogoTypescript />
-                  Typescript
-                </span>
-                <span className="text-sm flex items-center gap-1 bg-[#6E57E0] text-white px-2.5 py-0.5 rounded-[5px]">
-                  <FaReact />
-                  React.js
-                </span>
-                <span className="text-sm flex items-center gap-1 bg-[#6E57E0] text-white px-2.5 py-0.5 rounded-[5px]">
-                  <FaReact />
-                  React Native
-                </span>
-                <span className="text-sm flex items-center gap-1 bg-[#6E57E0] text-white px-2.5 py-0.5 rounded-[5px]">
-                  <SiRedux />
-                  Redux Toolkit
-                </span>
-                <span className="text-sm flex items-center gap-1 bg-[#6E57E0] text-white px-2.5 py-0.5 rounded-[5px]">
-                  <RiNextjsFill />
-                  Next.js
-                </span>
-                <span className="text-sm flex items-center gap-1 bg-[#6E57E0] text-white px-2.5 py-0.5 rounded-[5px]">
-                  AJAX
-                </span>
+              <div className="skills-box m-2.5">
+                <div className="skills-header mb-5">
+                  <h3 className="text-xl font-semibold cursor-default">{t("mobile")}</h3>
+                </div>
+                <div className="skills-list flex flex-wrap gap-2">
+                  <span className="text-sm flex items-center gap-1 bg-[#6E57E0] text-white px-2.5 py-0.5 rounded-[5px]">
+                    <FaReact />
+                    React Native
+                  </span>
+                </div>
               </div>
             </div>
             <div className="skills-box m-2.5">
